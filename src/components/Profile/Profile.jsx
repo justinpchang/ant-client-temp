@@ -5,7 +5,7 @@ function Profile() {
   return (
     <>
       <p>This is the profile page.</p>
-      <Link to="/">Home</Link>
+      <Link to="/home">Home</Link>
     </>
   )
 }
