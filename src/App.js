@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/project_search" component={ProjectSearch} />
+        <Route exact path="/project-search" component={ProjectSearch} />
       </Switch>
     </Router>
   );

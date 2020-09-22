@@ -7,7 +7,7 @@ function Home() {
       <p>This is the home page.</p>
       <Link to="/profile">Profile</Link>
       {'  '}
-      <Link to="/project_search">Project Search</Link>
+      <Link to="/project-search">Project Search</Link>
     </>
   );
 }
