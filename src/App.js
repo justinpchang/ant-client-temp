@@ -8,6 +8,7 @@ import {
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Landing from './components/Landing';
+import ProjectSearch from './components/ProjectSearch';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/project_search" component={ProjectSearch} />
       </Switch>
     </Router>
   );
