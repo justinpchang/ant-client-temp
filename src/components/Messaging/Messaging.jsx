@@ -7,6 +7,8 @@ const Messaging = () => {
         <>
             <p>This is the Messaging page.</p>
             <Link to="/home">Home</Link>
+            {'  '}
+            <Link to="/profile">Profile</Link>
         </>
     );
 };
