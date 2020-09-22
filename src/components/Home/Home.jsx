@@ -8,6 +8,7 @@ function Home() {
       <Link to="/profile">Profile</Link>
       {'  '}
       <Link to="/project-search">Project Search</Link>
+      <Link to="/messaging">Messaging</Link>
     </>
   );
 }
