@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
 export const NavbarBackground = styled.div`
-  color: palevioletred;
+  height: 40px;
+  background-color: palevioletred;
 `;
