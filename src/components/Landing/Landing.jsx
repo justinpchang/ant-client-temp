@@ -7,6 +7,7 @@ const Landing = () => {
         <>
           <p>This is the Landing page.</p>
           <Link to="/home">Home</Link>
+          <Link to="/login">Login</Link>
         </>
     );
 };
