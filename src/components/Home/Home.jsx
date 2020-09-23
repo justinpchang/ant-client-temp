@@ -9,6 +9,8 @@ function Home() {
       {'  '}
       <Link to="/project-search">Project Search</Link>
       <Link to="/messaging">Messaging</Link>
+      {'  '}
+      <Link to="/user-onboarding">User Onboarding</Link>
     </>
   );
 }
