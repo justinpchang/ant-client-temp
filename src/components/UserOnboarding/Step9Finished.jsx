@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Step9Finished = () => {
+const Step9Finished = (props) => {
+    if(props.currentStep !== 9) {
+        return null;
+    }
 
     return (
         <>

@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Step10GetStarted = () => {
+const Step10GetStarted = (props) => {
+    if(props.currentStep !== 10) {
+        return null;
+    }
 
     return (
         <>

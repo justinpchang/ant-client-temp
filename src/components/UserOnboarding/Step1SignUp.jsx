@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Step1SignUp = () => {
+const Step1SignUp = (props) => {
+    if(props.currentStep !== 1) {
+        return null;
+    }
 
     return (
         <>

@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Step5WorkExp = () => {
+const Step5WorkExp = (props) => {
+    if(props.currentStep !== 5) {
+        return null;
+    }
 
     return (
         <>

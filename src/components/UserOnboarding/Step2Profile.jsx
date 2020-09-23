@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Step2Profile = () => {
+const Step2Profile = (props) => {
+    if(props.currentStep !== 2) {
+        return null;
+    }
 
     return (
         <>
