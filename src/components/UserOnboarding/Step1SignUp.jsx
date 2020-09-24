@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import {
     Content,
     Container,
     Header,
     SubHeader,
-    InputField,
+    Input,
+    Form,
     Label,
     VerticalHR,
+    SignIn,
     SignInLink,
     Terms,
     Checkbox,
@@ -27,18 +28,20 @@ const Step1SignUp = (props) => {
                     <Header>Earn, Learn, and Grow
                         <SubHeader>Start Learning</SubHeader>
                     </Header>
-                    <InputField left="27px" top="29px" width="146px" type="text" placeholder="First Name" />
-                    <InputField left="203px" top="29px" width="148px" type="text" placeholder="Last Name" />
-                    <InputField left="27px" top="109px" width="324px" type="password" placeholder="Password" />
-                    <Label for="DOB">Date of Birth</Label>
-                    <InputField left="27px" top="210px" width="324px" id="DOB" type="DOB" placeholder="MM/DD/YYYY" />
-                    <SignInLink>Already have an account? <Link to="#!">Sign In</Link></SignInLink>
-                    <VerticalHR />
-                    <InputField right="27px" top="29px" width="324px" type="email" placeholder="University Email" />
-                    <InputField right="27px" top="109px" width="324px" type="password" placeholder="Re-enter Password" />
-                    <Checkbox type="radio" />
-                    <Terms>I AGREE TO TERMS OF SERVICE</Terms>
-                    <Button>Sign Up</Button>
+                    <Form>
+                        <Input name="first-name" left="27px" top="29px" width="146px" type="text" placeholder="First Name" />
+                        <Input name="last-name" left="203px" top="29px" width="148px" type="text" placeholder="Last Name" />
+                        <Input name="password" left="27px" top="109px" width="324px" type="password" placeholder="Password" />
+                        <Label htmlFor="DOB">Date of Birth</Label>
+                        <Input name="dob" left="27px" top="210px" width="324px" id="DOB" type="DOB" placeholder="MM/DD/YYYY" />
+                        <SignIn>Already have an account? <SignInLink to="#!">Sign In</SignInLink></SignIn>
+                        <VerticalHR />
+                        <Input name="email" right="27px" top="29px" width="324px" type="email" placeholder="University Email" />
+                        <Input name="password" right="27px" top="109px" width="324px" type="password" placeholder="Re-enter Password" />
+                        <Checkbox type="radio" />
+                        <Terms>I AGREE TO TERMS OF SERVICE</Terms>
+                        <Button>Sign Up</Button>
+                    </Form>
                 </Container>   
             </Content> 
         </>
