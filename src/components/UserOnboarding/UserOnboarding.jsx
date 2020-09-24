@@ -53,7 +53,9 @@ const UserOnboarding = (props) => {
         <>
             <p>This is the User Flow Onboarding page</p>
             <Link to="/home">Back to Home</Link>
+            {nextButton()}
             <form>
+                {submitButton()}
                 <Step1SignUp
                     currentStep={currentStep}
                 />
@@ -84,8 +86,6 @@ const UserOnboarding = (props) => {
                 <Step10GetStarted
                     currentStep={currentStep}
                 />
-                {nextButton()}
-                {submitButton()}
             </form>
         </>
     );
