@@ -50,6 +50,35 @@ export const SubHeader = styled.div`
     font-weight: normal;
 `;
 
+export const TitleContainer = styled.div`
+    /* Rectangle 79 */
+
+
+    position: absolute;
+    width: 100%;
+    height: 59px;
+    left: 219px;
+    top: -2px;
+
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+    color: #00000;
+`;
+export const Title = styled.div`
+    position: absolute;
+    width: 318px;
+    height: 30px;
+    left: 5%;
+    top: 6px;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 47px;
+
+    color
+`;
+
 export const Form = styled.form`
     width: 100%;
 `;
@@ -190,3 +219,4 @@ export const Checkbox = styled.input`
 
     background: #DADADA;
 `;
+
