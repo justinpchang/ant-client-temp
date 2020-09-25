@@ -1,5 +1,11 @@
 import React from 'react';
 
+import {
+    Content,
+    TitleContainer,
+    Title
+} from './UserOnboarding.styles';
+
 const Step2Profile = (props) => {
     if(props.currentStep !== 2) {
         return null;
@@ -7,7 +13,11 @@ const Step2Profile = (props) => {
 
     return (
         <>
-            <p>Step 2 Profile setup</p>
+            <Content>
+                <TitleContainer>
+                    <Title>PROFILE</Title>
+                </TitleContainer>
+            </Content>
         </>
     );
 };

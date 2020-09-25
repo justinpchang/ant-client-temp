@@ -15,7 +15,7 @@ import Step10GetStarted from './Step10GetStarted';
 import SideNavigation from './SideNavigation';
 
 const UserOnboarding = (props) => {
-    const [currentStep, setCurrentStep] = useState(2);
+    const [currentStep, setCurrentStep] = useState(1);
 
     const _next = () => {
         let step = currentStep >= 9 ? 10 : currentStep + 1;

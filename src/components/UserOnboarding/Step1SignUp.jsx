@@ -38,8 +38,7 @@ const Step1SignUp = (props) => {
                         <VerticalHR />
                         <Input name="email" right="27px" top="29px" width="324px" type="email" placeholder="University Email" />
                         <Input name="password" right="27px" top="109px" width="324px" type="password" placeholder="Re-enter Password" />
-                        <Checkbox type="radio" />
-                        <Terms>I AGREE TO TERMS OF SERVICE</Terms>
+                        <Terms right="28px" top="203px"><Checkbox left="-40px" top="-5px" type="radio" /> I AGREE TO TERMS OF SERVICE</Terms>
                         <Button>Sign Up</Button>
                     </Form>
                 </Container>   

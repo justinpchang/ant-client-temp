@@ -67,7 +67,7 @@ export const Title = styled.div`
     position: absolute;
     width: 318px;
     height: 30px;
-    left: 5%;
+    left: 88px;
     top: 6px;
 
     font-family: Assistant;
@@ -198,8 +198,12 @@ export const Terms = styled.div`
     position: absolute;
     width: 198px;
     height: 21px;
+
     right: 28px;
+    right: ${(props) => props.right};
     top: 203px;
+    top: ${(props) => props.top};
+    left: ${(props) => props.left};
 
     font-weight: 600;
     font-size: 11px;
@@ -211,12 +215,15 @@ export const Checkbox = styled.input`
     /* Subtract */
 
     position: absolute;
-    right: 235px;
-    top: 197px;
+
+    // right: 235px;
+    right: ${(props) => props.right};
+    // top: 197px;
+    top: ${(props) => props.top};
+    left: ${(props) => props.left};
 
     width: 22px;
     height: 22px;
 
     background: #DADADA;
 `;
-
