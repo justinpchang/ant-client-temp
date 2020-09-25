@@ -8,6 +8,7 @@ import {
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Landing from './components/Landing';
+import Login from './components/Login';
 import ProjectSearch from './components/ProjectSearch';
 import Messaging from './components/Messaging';
 import UserOnboarding from './components/UserOnboarding';
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/project-search" component={ProjectSearch} />
