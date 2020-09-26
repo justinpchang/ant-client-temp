@@ -1,56 +1,42 @@
 import React from 'react';
 
-import facebook from '../../images/facebook_login.png';
-import google from '../../images/google_login.png';
-import Navbar from './LoginNavbar';
+import logo from '../../images/ANT_Logo_White.svg';
 import {
-  Spacer,
-  Container,
-  Content,
-  Header,
-  LoginBox,
+  Background,
+  MainContainer,
+  Row,
+  Column,
+  Logo,
+  Tagline,
+  BottomText,
+  Link,
+  InputText,
+  Input,
+  Button,
   Divider,
-  LoginBoxContent,
-  LoginInput,
-  ExternalLogin,
-  ExternalLoginText,
-  TinyText,
-  LoginButton,
 } from './Login.styles';
 
 function Login(props) {
   return (
-    <Container>
-      <Navbar />
-      <Content>
-        <Header bold>Welcome to Ant!</Header>
-        <Header>Curating talent across the globe</Header>
-        <LoginBox>
-          <Divider></Divider>
-          <LoginBoxContent left>
-            <Spacer height={50} />
-            <LoginInput placeholder="Email" />
-            <Spacer height={15} />
-            <LoginInput placeholder="Password" />
-            <TinyText>Forgot password?</TinyText>
-            <LoginButton>Log In</LoginButton>
-            <TinyText out>Don't have an account? Sign up</TinyText>
-          </LoginBoxContent>
-          <LoginBoxContent right>
-            <Spacer height={50} />
-            <ExternalLogin>
-              <img src={facebook} style={{width: "35px", height: "30px"}} />
-              <ExternalLoginText>Login with Facebook</ExternalLoginText>
-            </ExternalLogin>
-            <Spacer height={15} />
-            <ExternalLogin>
-              <img src={google} style={{marginLeft: "5px", width: "25px", height: "30px"}} />
-              <ExternalLoginText>Login with Google</ExternalLoginText>
-            </ExternalLogin>
-          </LoginBoxContent>
-        </LoginBox>
-      </Content>
-    </Container>
+    <Background>
+      <MainContainer>
+        <Column> 
+          <Logo src={logo} />
+          <Tagline>Curating talent across the globe.</Tagline>
+          <BottomText>New to ANT? <Link>SIGN UP</Link></BottomText>
+        </Column>
+        <Column right>
+          <InputText first>Email</InputText>
+          <Input />
+          <InputText>Password</InputText>
+          <Input type="password" placeholder="6+ characters" />
+          <InputText>Forgot password? <Link>RESET</Link></InputText>
+          <Button>SIGN IN</Button>
+          <Divider />
+          <InputText>Google | Facebook</InputText>
+        </Column>
+      </MainContainer>
+    </Background>
   )
 }
 

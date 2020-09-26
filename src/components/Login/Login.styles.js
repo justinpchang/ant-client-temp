@@ -1,95 +1,122 @@
 import styled from 'styled-components';
+import { COLORS } from '../../constants';
 
-export const Spacer = styled.div`
-  display: block;
+export const Background = styled.div`
+  height: 100%;
   width: 100%;
-  height: ${props => props.height}px;
-`;
-
-export const Container = styled.div`
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  margin-top: 80px;
-`;
-
-export const Header = styled.h1`
-  text-align: center;
-  font-weight: ${props => props.bold ? 600 : 200};
-  margin-bottom: 20px;
-`;
-
-export const LoginBox = styled.div`
-  height: 250px;
-  width: 50%;
-  margin: 0 auto;
-  min-width: 600px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  position: relative;
+  position: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${COLORS.LIGHT_GREY};
+`;
+
+export const MainContainer = styled.div`
+  height: 400px;
+  width: 60%;
+  overflow: auto;
+  background: ${COLORS.WHITE};
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
 `;
 
-export const Divider = styled.div`
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  border-left: 1px solid lightgrey;
-`;
-
-export const LoginBoxContent = styled.div`
-  height: 100%;
-  flex: 1;
-`;
-
-export const LoginInput = styled.input`
-  display: block;
-  height: 25px;
-  width: 75%;
-  margin: 0 auto;
-  border: 1px solid grey;
-  border-radius: 3px;
-  padding: 8px;
-  font-size: 13px;
-`;
-
-export const ExternalLogin = styled.div`
+export const Row = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 40px;
+  position: relative;
+  ${props => props.right
+  ? "justify-content: center;"
+  : ""}
+`;
+
+export const Logo = styled.img`
+  position: fixed;
+  width: 58px;
   height: 25px;
-  width: 75%;
-  margin: 0 auto;
-  border: 1px solid grey;
-  border-radius: 3px;
-  padding: 8px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(93%) saturate(6092%) hue-rotate(234deg) brightness(89%) contrast(92%);
 `;
 
-export const ExternalLoginText = styled.p`
-  margin-left: 10px;
-  font-weight: 200px;
-  font-size: 13px;
-  padding: 5px 0;
-  cursor: default;
+export const Tagline = styled.p`
+  width: 100%;
+  font-size: 3vw;
+  font-weight: 600;
+  margin-top: 20%;
 `;
 
-export const TinyText = styled.p`
-  text-align: left;
-  font-size: 12px;
-  color: black;
-  margin-top: ${props => props.out ? "90px" : "8px"};
-  margin-left: 10%;
-  display: inline-block;
+export const BottomText = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  float: bottom;
+  position: absolute;
+  bottom: 15%;
 `;
 
-export const LoginButton = styled.button`
-  width: 60px;
-  height: 25px;
-  background: rgba(17, 195, 206, 0.21);
+export const Link = styled.span`
+  color: ${COLORS.PURPLE};
+  font-weight: 600;
+  cursor: pointer;
+`;
+
+export const InputText = styled.label`
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  ${props => !props.first ? "margin-top: 20px" : "margin-top: -30px"};
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  height: 37px;
+  border: 1px solid ${COLORS.GREY};
+  box-sizing: border-box;
   border-radius: 5px;
-  display: inline-block;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10%;
-  font-size: 13px;
+  margin-top: 5px;
+  padding: 0 10px;
+
+  ::placeholder,
+  ::-webkit-input-placeholder{
+    color: ${COLORS.GREY};
+    font-size: 14px;
+  }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  background: ${COLORS.PURPLE};
+  color: ${COLORS.WHITE};
+  padding: 13px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+`;
+
+export const Divider = styled.div`
+  width: 50%;
+  height: 0px;
+  border: .5px solid ${COLORS.GREY};
+  margin: 0 auto;
+  margin-top: 25px;
+`;
+
+export const LoginButton = styled.div`
+  background: ${COLORS.WHITE};
+  width: 90%;
+
 `;
