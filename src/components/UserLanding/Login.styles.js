@@ -12,7 +12,7 @@ export const Background = styled.div`
 `;
 
 export const MainContainer = styled.div`
-  height: 400px;
+  min-height: 400px;
   width: 60%;
   overflow: auto;
   background: ${COLORS.WHITE};
@@ -28,14 +28,16 @@ export const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0;
 `;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
-  padding: 40px;
+  flex: ${props => props.scalar ? props.scalar : 1};
+  padding: ${props => props.small ? "0px" : "40px"};
+  margin-right: ${props => props.small ? "5px" : "0px"};
   position: relative;
   ${props => props.right
   ? "justify-content: center;"
@@ -67,7 +69,7 @@ export const BottomText = styled.p`
 
 export const Link = styled.span`
   color: ${COLORS.PURPLE};
-  font-weight: 600;
+  font-weight: ${props => props.light ? 400 : 600};
   cursor: pointer;
 `;
 
@@ -118,5 +120,10 @@ export const Divider = styled.div`
 export const LoginButton = styled.div`
   background: ${COLORS.WHITE};
   width: 90%;
+`;
 
+export const Selector = styled.div`
+  width: 100%;
+  border: 1px solid ${COLORS.PURPLE};
+  font-size: 13px;
 `;

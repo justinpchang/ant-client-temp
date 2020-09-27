@@ -1,5 +1,6 @@
 import React from 'react';
 
+import history from '../../history';
 import logo from '../../images/ANT_Logo_White.svg';
 import {
   Background,
@@ -23,7 +24,7 @@ function Login(props) {
         <Column> 
           <Logo src={logo} />
           <Tagline>Curating talent across the globe.</Tagline>
-          <BottomText>New to ANT? <Link>SIGN UP</Link></BottomText>
+          <BottomText>New to ANT? <Link onClick={(e) => history.push("/signup")}>SIGN UP</Link></BottomText>
         </Column>
         <Column right>
           <InputText first>Email</InputText>
