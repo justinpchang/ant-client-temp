@@ -5,7 +5,6 @@ import logo from '../../images/ANT_Logo_White.svg';
 import {
   Background,
   MainContainer,
-  Row,
   Column,
   Logo,
   Tagline,

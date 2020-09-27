@@ -36,6 +36,7 @@ const UserOnboarding = (props) => {
         return null;
     };
 
+    /*
     const submitButton = () => {
         if(currentStep > 9) {
             return (
@@ -49,6 +50,7 @@ const UserOnboarding = (props) => {
         }
         return null;
     }
+    */
     
     const displaySideNav = (
         [1,3,4,8,9].indexOf(currentStep) !== -1 ? 
