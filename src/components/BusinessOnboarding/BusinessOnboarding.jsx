@@ -1,42 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import CompanyCard from './CompanyCard';
-
-import {
-    Background,
-    MainContainer
-} from './BusinessOnboarding.styles';
-
-// Theres gotta be a better way..
-const text = {
-    input: [
-        'Enter a company name. eg. Google',
-        'Search company'
-    ],
-    title: [
-        "Create a new company",
-        "Join an existing company"
-    ],
-    button: [
-        'START A COMPANY',
-        'ASK TO JOIN'
-    ]
-};
+import Step1 from './Step1';
 
 const BusinessOnboarding = () => {
+    const [currentStep, setCurrentStep] = useState(1);
+    // Option is for step 4/5 on whether or not to Hire a Consultant, or Post a Project
+
+    const _next = () => {
+        let step = currentStep >= 1 ? 2 : currentStep + 1;
+        setCurrentStep(step);
+        
+    };
+    
+    const nextPage = () => {
+        if(currentStep <= 2 ) {
+            return (
+                <button
+                    type="button"
+                    onClick={_next}
+                >
+                    Next
+                </button>
+            );
+        }
+        return null;
+    };
 
     return (
         <>
             <Link to='/home'>Home</Link>
-            <Background>
-                <MainContainer>
-                    <CompanyCard input={text.input[0]} title={text.title[0]} button={text.button[0]} />
-                </MainContainer>
-                <MainContainer>
-                    <CompanyCard input={text.input[1]} title={text.title[1]} button={text.button[1]} />
-                </MainContainer>
-            </Background>
+            {nextPage()}
+            <Step1 currentStep={currentStep} />
         </>
     );
 };
