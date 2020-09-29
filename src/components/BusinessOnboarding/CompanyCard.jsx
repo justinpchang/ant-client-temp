@@ -9,15 +9,15 @@ import {
 
 } from './BusinessOnboarding.styles';
 
-const CompanyCard = ({ title, input, button }) => {
+const CompanyCard = (props) => {
 
     return (
         <>
            <CardWrapper>
-                <Title>{title}</Title>
+                <Title>{props.title}</Title>
                 <Label>Company Name</Label>
-                <Input placeholder={input} />
-                <Button>{button}</Button>
+                <Input placeholder={props.input} />
+                <Button>{props.button}</Button>
            </CardWrapper>
         </>
     );

@@ -7,23 +7,6 @@ import {
     MainContainer
 } from './BusinessOnboarding.styles';
 
-
-// Theres gotta be a better way..
-const text = {
-    input: [
-        'Enter a company name. eg. Google',
-        'Search company'
-    ],
-    title: [
-        "Create a new company",
-        "Join an existing company"
-    ],
-    button: [
-        'START A COMPANY',
-        'ASK TO JOIN'
-    ]
-};
-
 const Step1 = ({ currentStep }) => {
     if(currentStep !== 1) {
         return null
@@ -32,10 +15,10 @@ const Step1 = ({ currentStep }) => {
     return (
         <Background>
             <MainContainer>
-                <CompanyCard input={text.input[0]} title={text.title[0]} button={text.button[0]} />
+                <CompanyCard input={'Enter a company name. eg. Google'} title={'Create a new company'} button={'START A COMPANY'} />
             </MainContainer>
             <MainContainer>
-                <CompanyCard input={text.input[1]} title={text.title[1]} button={text.button[1]} />
+                <CompanyCard input={'Search company'} title={'Join an existing company'} button={'ASK TO JOIN'} />
             </MainContainer>
         </Background>
     );
