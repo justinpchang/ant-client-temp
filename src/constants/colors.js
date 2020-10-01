@@ -3,6 +3,8 @@ const COLORS = {
   LIGHT_GREY: '#E5E5E5',
   PURPLE: '#404BDB',
   WHITE: '#FFFFFF',
+  BLUE: '#404BDB',
+  DARKBLUE: '#121FC3',
 }
 
 export default COLORS;
