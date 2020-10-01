@@ -5,13 +5,13 @@ import {
     Icon
 } from './Button.styles';
 
-const WhiteBtn = ({ icon, inactive }) => {
+const WhiteBtn = ({ icon, inactive, size, children }) => {
     const displayIcon = (!icon) ? '' : (
         <Icon></Icon>
-    )
+    );
 
     return (
-        <Button white icon={icon} inactive={inactive}>{displayIcon}Button</Button>
+        <Button white size={size} icon={icon} inactive={inactive}>{displayIcon}{children}</Button>
     );
 };
 

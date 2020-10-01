@@ -14,6 +14,8 @@ function Home() {
       <Link to="/user-onboarding">User Onboarding</Link>
       {'  '}
       <Link to="/business-onboarding">Business Onboarding</Link>
+      {'  '}
+      <Link to="/test">Testing Canvas</Link>
     </>
   );
 }

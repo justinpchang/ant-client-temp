@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Test from './Test';
-
 const BusinessOnboarding = () => {
     const [currentStep, setCurrentStep] = useState();
     // Option is for step 4/5 on whether or not to Hire a Consultant, or Post a Project
@@ -56,7 +54,6 @@ const BusinessOnboarding = () => {
             <p>This is Business Onboarding page.</p>
             <Link to="/home">Home</Link>
             <form>
-                <Test />
                 {nextPage()}
                 {submitButton()}
             </form>

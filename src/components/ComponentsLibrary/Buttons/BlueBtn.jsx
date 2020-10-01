@@ -2,14 +2,16 @@ import React from 'react';
 
 import {
     Button,
+    Icon
 } from './Button.styles';
 
-const BlueButton = ({ icon, inactive }) => {
+const BlueButton = ({ icon, inactive, size, children }) => {
+    const displayIcon = (!icon) ? '' : (
+        <Icon></Icon>
+    );
 
     return (
-        <>
-            <Button blue icon={icon} inactive={inactive}>Button</Button>
-        </>
+        <Button blue size={size} icon={icon} inactive={inactive}>{displayIcon}{children}</Button>
     );
 };
 

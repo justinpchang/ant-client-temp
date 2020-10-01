@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../constants';
 
-
 export const Button = styled.button`
+    // THIS IS TEMP FOR DEVELOPMENT REMOVE FOR PRODUCTION //
+        margin: 10px;
+    // ******** //
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     height: 40px;
-    width: 93px;
+    padding: 0 ${(props) => props.size ? props.size : '1'}rem;
+
     box-sizing: border-box;
     border-radius: 2px;
 
@@ -36,6 +40,15 @@ export const Button = styled.button`
             background: #F9F9F9;
             box-shadow: none;
         }
+
+        span {
+            ::before {
+                background: ${COLORS.BLUE};
+            }
+            ::after {
+                background: ${COLORS.BLUE};
+            }
+        }
     }` 
     : 
     ''}
@@ -46,14 +59,19 @@ export const Button = styled.button`
         :active {
             background: ${COLORS.DARKBLUE};
         }
+
+        span {
+            ::before {
+                background: ${COLORS.WHITE};
+            }
+            ::after {
+                background: ${COLORS.WHITE};
+            }
+        }
     }` 
     : 
     ''}
-    ${(props) => props.icon ? `{
-        width: 112px;
-    }`
-    :
-    ''}
+
     ${(props) => props.inactive ? `{
         background: #D2D2D2;
         color: ${COLORS.WHITE};
@@ -63,6 +81,15 @@ export const Button = styled.button`
         }
         :hover {
             box-shadow: none;
+        }
+
+        span {
+            ::before {
+                background: ${COLORS.WHITE};
+            }
+            ::after {
+                background: ${COLORS.WHITE};
+            }
         }
     }`
     :
@@ -76,26 +103,33 @@ export const Button = styled.button`
     }`
     :
     ''}
+
 `;
 
 export const Icon = styled.span`
-    width: 32px;
-    height: 20px;
-    color: black;
+    position: relative;
+
+    height: 22px;
+    margin-right: 18px;
+    padding-left: 6px;
     
     :before, :after {
         position: absolute;
-        content: ' ';
-        height: 20px;
-        width: 4px;
+        top: 20.83%;
+        bottom: 20.83%;
 
-        border-radius: 50px;
-        background: #333;
+        content: ' ';
+        height: 14px;
+        width: 2.5px;
     }
     ::before {
         transform: rotate(0deg);
+        background: ${COLORS.WHITE};
+        border-radius: 10px;
     }
     ::after {
         transform: rotate(-90deg);
+        background: ${COLORS.WHITE};
+        border-radius: 10px;
     }
 `; 
