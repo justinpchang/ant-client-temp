@@ -71,7 +71,6 @@ export const Button = styled.button`
     }` 
     : 
     ''}
-
     ${(props) => props.inactive ? `{
         background: #D2D2D2;
         color: ${COLORS.WHITE};

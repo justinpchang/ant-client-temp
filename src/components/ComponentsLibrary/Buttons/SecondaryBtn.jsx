@@ -11,7 +11,7 @@ const SecondaryBtn = ({ icon, inactive, size, children }) => {
     );
 
     return (
-        <Button white stroke size={size} inactive={inactive} icon={icon}>{displayIcon}{children}</Button>
+        <Button white stroke size={size} inactive={inactive}>{displayIcon}{children}</Button>
     );
 };
 

@@ -11,7 +11,7 @@ const WhiteBtn = ({ icon, inactive, size, children }) => {
     );
 
     return (
-        <Button white size={size} icon={icon} inactive={inactive}>{displayIcon}{children}</Button>
+        <Button white size={size} inactive={inactive}>{displayIcon}{children}</Button>
     );
 };
 

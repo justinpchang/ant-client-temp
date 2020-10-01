@@ -11,7 +11,7 @@ const BlueButton = ({ icon, inactive, size, children }) => {
     );
 
     return (
-        <Button blue size={size} icon={icon} inactive={inactive}>{displayIcon}{children}</Button>
+        <Button blue size={size} inactive={inactive}>{displayIcon}{children}</Button>
     );
 };
 
