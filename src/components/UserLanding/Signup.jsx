@@ -2,6 +2,8 @@ import React from 'react';
 
 import history from '../../history';
 import logo from '../../images/ANT_Logo_White.svg';
+import google from '../../images/google_logo.png';
+import facebook from '../../images/facebook_logo.png';
 import {
   Background,
   MainContainer,
@@ -16,6 +18,8 @@ import {
   Button,
   Divider,
   Selector,
+  ExternalLogin,
+  ExternalLoginImg,
 } from './Login.styles';
 
 function Signup(props) {
@@ -29,11 +33,16 @@ function Signup(props) {
         </Column>
         <Column right>
           <Row>
-            <Column small scalar={2}>
+            <Column small scalar={1.5}>
               <InputText>What describes you best?</InputText>
             </Column>
             <Column small right>
-              <Selector>Student | Business</Selector>
+              <InputText>
+                <Selector>
+                  <span style={{textAlign:"left",backgroundColor:"white"}}>Student</span>
+                  <span style={{float:"right"}}>Business</span>
+                </Selector>
+              </InputText>
             </Column>
           </Row>
           <Row>
@@ -53,7 +62,15 @@ function Signup(props) {
           <InputText>By signing up, you agree to the <Link light>ANT Terms of service</Link>, <Link light>Privacy policy</Link>, and <Link light>Data processing agreement</Link>.</InputText>
           <Button>SIGN UP</Button>
           <Divider />
-          <InputText>Google | Facebook</InputText>
+          <Row>
+            <ExternalLogin>
+              <ExternalLogi><ExternalLoginImg src={google} /></Column>
+              <Column>Sign up with Google</Column>
+            </ExternalLogin>
+            <ExternalLogin>
+              Sign up with Facebook
+            </ExternalLogin>
+          </Row>
         </Column>
       </MainContainer>
     </Background>

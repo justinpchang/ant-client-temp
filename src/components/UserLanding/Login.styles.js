@@ -126,4 +126,24 @@ export const Selector = styled.div`
   width: 100%;
   border: 1px solid ${COLORS.PURPLE};
   font-size: 13px;
+  padding: 6px;
+  margin-top: -6px;
+  margin-left: -10px;
+`;
+
+export const ExternalLogin = styled(Column)`
+  border: 1px solid ${COLORS.GREY};
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+`;
+
+export const ExternalLoginImg = styled.img`
+  height: 16px;
+  width: 16px;
 `;
