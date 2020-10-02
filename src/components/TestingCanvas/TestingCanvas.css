@@ -1,9 +1,9 @@
 .testRow {
-    height: 50vh;
+    height: 40vh;
     background: #F1FDFF;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
 }
