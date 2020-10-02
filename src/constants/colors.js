@@ -1,10 +1,14 @@
 const COLORS = {
   GREY: '#B4B4B4',
   LIGHT_GREY: '#E5E5E5',
+  DARK_GREY: '#6B6B6B',
   PURPLE: '#404BDB',
   WHITE: '#FFFFFF',
   BLUE: '#404BDB',
   DARKBLUE: '#121FC3',
+  RED: '#E91037',
+  TEAL: '#4BC0D1',
+  BLACK: '#161616',
 }
 
 export default COLORS;
