@@ -16,6 +16,7 @@ import ProjectSearch from './components/ProjectSearch';
 import Messaging from './components/Messaging';
 import UserOnboarding from './components/UserOnboarding';
 import BusinessOnboarding from './components/BusinessOnboarding';
+import TestingCanvas from './components/TestingCanvas';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/messaging" component={Messaging} />
         <Route exact path="/user-onboarding" component={UserOnboarding} />
         <Route exact path="/business-onboarding" component={BusinessOnboarding} />
+        <Route exact path="/test" component={TestingCanvas} />
       </Switch>
     </Router>
   );

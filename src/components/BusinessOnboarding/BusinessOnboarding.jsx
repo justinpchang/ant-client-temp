@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import Step1Registration from './Step1Registration';
-import Step2UploadOverlay from './Step2UploadOverlay';
-import Step3PostHire from './Step3PostHire';
-import Step4Consultant from './Step4Consultant';
-import Step5Project from './Step5Project';
-import Step6Finished from './Step6Finished';
-import Step7Profile from './Step7Profile';
-
 const BusinessOnboarding = () => {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState();
     // Option is for step 4/5 on whether or not to Hire a Consultant, or Post a Project
     const [option, setOption] = useState(null);
 
@@ -62,31 +54,6 @@ const BusinessOnboarding = () => {
             <p>This is Business Onboarding page.</p>
             <Link to="/home">Home</Link>
             <form>
-                <Step1Registration
-                    currentStep={currentStep}
-                />
-                 <Step2UploadOverlay
-                    currentStep={currentStep}
-                />
-                 <Step3PostHire
-                    currentStep={currentStep}
-                    setCurrentStep={setCurrentStep}
-                    setOption={setOption}
-                />
-                 <Step4Consultant
-                    currentStep={currentStep}
-                    option={option}
-                />
-                 <Step5Project
-                    currentStep={currentStep}
-                    option={option}
-                />
-                 <Step6Finished
-                    currentStep={currentStep}
-                />
-                 <Step7Profile
-                    currentStep={currentStep}
-                />
                 {nextPage()}
                 {submitButton()}
             </form>
