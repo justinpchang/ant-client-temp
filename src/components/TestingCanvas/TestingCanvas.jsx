@@ -46,7 +46,7 @@ const Test = () => {
 
       <div className="testRow">
         {/* implementing text inputs */}
-        <TextInput label="Normal" placeholder="Normal" />
+        <TextInput label="Normal label" placeholder="Normal" />
         <TextInput placeholder="Error" error={true} />
         <TextInput placeholder="Validated" validated={true} />
         <TextInput placeholder="Disabled" disabled={true} />

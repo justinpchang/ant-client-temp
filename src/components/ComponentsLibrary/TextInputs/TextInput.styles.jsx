@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../constants';
 
+export const Container = styled.div`
+  position: relative;
+  top: -17px;
+  width: ${props => props.width ? props.width : 300}px;
+`;
+
 export const StyledTextInput = styled.input`
   margin: 0;
   padding: 0;
-  display: block;
   width: ${props => props.width ? props.width : 300}px;
   height: ${props => props.height ? props.height : 40}px;
   background: ${COLORS.WHITE};

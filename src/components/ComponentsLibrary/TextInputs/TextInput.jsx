@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledTextInput } from './TextInput.styles';
+import { Container, StyledTextInput } from './TextInput.styles';
 import Label from './Label';
 
 /*
@@ -21,18 +21,22 @@ const TextInput = (props) => {
 
   return (
     <>
-      {props.label && (
-        <Label>{props.label}</Label>
-      )}
-      <StyledTextInput
-        value={props.value}
-        placeholder={props.placeholder || ""}
+      <Container
         width={props.width || 300}
-        height={props.height || 40}
-        {...disabled}
-        error={props.error || false}
-        validated={props.validated || false}
-      />
+      >
+        {props.label && (
+          <Label>{props.label}</Label>
+        )}
+        <StyledTextInput
+          value={props.value}
+          placeholder={props.placeholder || ""}
+          width={props.width || 300}
+          height={props.height || 40}
+          {...disabled}
+          error={props.error || false}
+          validated={props.validated || false}
+        />
+      </Container>
     </>
   );
 };
