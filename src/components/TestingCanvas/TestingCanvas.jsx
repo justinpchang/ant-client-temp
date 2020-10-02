@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { BlueBtn, WhiteBtn, SecondaryBtn } from "../ComponentsLibrary/Buttons";
-import { TextInput, Label } from '../ComponentsLibrary/TextInputs';
+import { TextInput } from '../ComponentsLibrary/TextInputs';
 
 import "./TestingCanvas.css";
 
@@ -47,8 +47,8 @@ const Test = () => {
       <div className="testRow">
         {/* implementing text inputs */}
         <TextInput label="Normal label" placeholder="Normal" />
-        <TextInput placeholder="Error" error={true} />
-        <TextInput placeholder="Validated" validated={true} />
+        <TextInput placeholder="Error" error={true} footnote="Error footnote" />
+        <TextInput label="Validated label" placeholder="Validated" validated={true} footnote="Validated footnote" />
         <TextInput placeholder="Disabled" disabled={true} />
       </div>
     </>
