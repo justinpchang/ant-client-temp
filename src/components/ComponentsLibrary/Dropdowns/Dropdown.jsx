@@ -9,11 +9,12 @@ import {
     Option,
     DropdownBtnWrapper,
     DropdownBtn,
+    Arrow,
     RequiredSpan,
 } from './Dropdown.styles'
 
-const Dropdown = ({ optionsData, header }) => {
-    const [listOpen, setListOpen] = useState(true);
+const Dropdown = ({ optionsData, header, inactive, handleSelected }) => {
+    const [listOpen, setListOpen] = useState(false);
     const [selected, setSelected] = useState('');
     const wrapperRef = useRef(null);
 
@@ -44,12 +45,12 @@ const Dropdown = ({ optionsData, header }) => {
     ))
 
     return (
-        <DropdownWrapper  ref={wrapperRef}>
+        <DropdownWrapper inactive={inactive} ref={wrapperRef}>
             <Label htmlFor="dropdown">Field title text <RequiredSpan>*</RequiredSpan></Label>
             <Select width={12} id="dropdown">
                 <Title>{!selected ? header : selected}</Title>
                 <DropdownBtnWrapper onClick={() => toggleList()}>
-                    <DropdownBtn open={listOpen}>{'>'}</DropdownBtn>
+                    <DropdownBtn><Arrow open={listOpen}></Arrow></DropdownBtn>
                 </DropdownBtnWrapper>
             </Select>
             <OptionList onClick={(e) => setSelected(e.target.value)} open={listOpen}>

@@ -26,7 +26,6 @@ const dummyHeader = 'Choose a month...'
 
 const Test = () => {
 
-
     return (
         <>
             <Link to="/home">Home</Link>
@@ -37,7 +36,7 @@ const Test = () => {
 
             <div className="testRow">
                 {/* Figma Design examples */}
-                <Dropdown />
+                <Dropdown inactive optionsData={dummyData} header={dummyHeader} />
             </div>
         </>
     );
