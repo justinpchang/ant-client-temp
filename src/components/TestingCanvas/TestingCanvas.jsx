@@ -1,15 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import './TestingCanvas.css';
+
+import { Dropdown } from '../ComponentsLibrary/Dropdowns';
 import { BlueBtn, WhiteBtn, SecondaryBtn } from "../ComponentsLibrary/Buttons";
 import { TextInput } from '../ComponentsLibrary/TextInputs';
 
-import "./TestingCanvas.css";
+const dummyData = [
+  {
+    id: 0,
+    option: 'June'
+  },
+  {
+    id: 1,
+    option: 'July'
+  },
+  {
+    id: 2,
+    option: 'August'
+  },
+];
 
 const Test = () => {
+
   return (
     <>
       <Link to="/home">Home</Link>
+
+      <div className="testRow">
+        {/* Default Component Library */}
+        <Dropdown required label={'Graduation Date'} width={200} optionsData={dummyData} placeholder={'Month'} />
+        <Dropdown label={'Degree'} width={300} optionsData={dummyData} placeholder={'Bachelors'} />
+        <Dropdown required label={'Start Date'} width={200} optionsData={dummyData} placeholder={'Month'} />
+        {/* Figma Design examples */}
+        <Dropdown required label={'End Date'} size={200} inactive optionsData={dummyData} placeholder={'Month'} />
+      </div>
 
       <div className="testRow">
         {/* implementing buttons to match figma designs */}
