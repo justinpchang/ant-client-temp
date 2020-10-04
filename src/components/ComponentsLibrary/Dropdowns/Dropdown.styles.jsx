@@ -4,10 +4,8 @@ import { COLORS } from '../../../constants';
 export const DropdownWrapper = styled.div`
 	position: relative;
 
-	font-style: normal;
-	font-weight: normal;
+	width: ${(props) => props.width ? props.width : '300'}px;
 	font-size: 14px;
-	line-height: 18px;
 
 	${(props) => props.inactive ? `{
 		pointer-events:none;
@@ -16,15 +14,16 @@ export const DropdownWrapper = styled.div`
 	: 
 	''};
 `;
-
 export const Select = styled.div`
 	display:flex;
 	align-items: center;
 	flex-direction: row;
-	width: ${(props) => props.width ? props.width : '10'}rem;
+
+	width: 100%;
 	height: 40px;
-	background: #FFFFFF;
-	border: 1px solid #6B6B6B;
+
+	background: ${COLORS.WHITE};
+	border: 1px solid ${COLORS.DARK_GREY};
 	box-sizing: border-box;
 	border-radius: 5px;
 	color: ${COLORS.GREY};
@@ -37,30 +36,36 @@ export const Select = styled.div`
 	}
 `;
 export const OptionList = styled.ul`
-    width: 100%;
-    display: ${(props) => !props.open ? 'none' : ''};
-    list-style-type: none;
-`
+	display: ${(props) => !props.open ? 'none' : ''};
+	position: absolute;
+
+	width: 100%;
+
+	list-style-type: none;
+`;
 export const Option = styled.li`
-    display: flex;
-    align-items: center;
-    height: 34px;
-    padding-left: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+	display: flex;
+	align-items: center;
+	position: relative;
 
-    background: ${COLORS.WHITE};
-    cursor: pointer;
+	height: 34px;
+	width: 96%;
 
-    :first-child {
-        margin-top: 3px;
-				border-top-left-radius: 5px;
-				border-top-right-radius: 5px;
-    }
+	padding-left: 10px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 
-    :last-child {
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;
-    }
+	background: ${COLORS.WHITE};
+	cursor: pointer;
+
+	:first-child {
+			margin-top: 3px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+	};
+	:last-child {
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	};
 `;
 export const DropdownBtnWrapper = styled.div`
 	display: flex;
@@ -82,7 +87,6 @@ export const DropdownBtnWrapper = styled.div`
 			transition: .1s;
 	}
 `;
-
 export const DropdownBtn = styled.div`
 	font-weight: 600;
 	font-size: 18px;
@@ -94,28 +98,24 @@ export const DropdownBtn = styled.div`
 			transition: .1s;
 	}
 `;  
-
 export const Arrow = styled.img`
 	height: 12px;
 	width: 8px;
+
 	border-radius: 10px;
 	clip-path: polygon(70% 10%, 100% 10%, 40% 50%, 100% 90%, 70% 90%, 5% 50%);
+	transform: rotate(${(props) => props.open ? '90' : '270'}deg);
 
 	margin-bottom: ${(props) => props.open ? '0' : '0'}px;
-	transform: rotate(${(props) => props.open ? '90' : '270'}deg);
-	background-color: black;
+	background-color: ${COLORS.BLACK};
 `;
-export const Title = styled.span`
+export const Placeholder = styled.span`
 	width: 100%;
 	height: 18px;
-
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 18px;
+	
 	letter-spacing: -0.02em;
 
-	color: #B4B4B4;
+	${(props) => props.selected !== props.placeholder ? `${COLORS.BLACK}` : 'color: #B4B4B4'};
 `;
 export const Label = styled.label`
 	position: absolute;
@@ -124,12 +124,10 @@ export const Label = styled.label`
 
 	margin-left: 3px;
 
-	font-size: 14px;
 	line-height: 14px;
 	letter-spacing: -0.02em;
-	color: #161616;
+	color: ${COLORS.BLACK};
 `;
-
 export const RequiredSpan = styled.span`
 	color: red;
 `;
