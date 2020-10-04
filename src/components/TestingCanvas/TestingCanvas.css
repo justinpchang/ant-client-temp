@@ -1,6 +1,7 @@
 .testRow {
-    height: 40vh;
+    min-height: 100vh;
     background: #F1FDFF;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
