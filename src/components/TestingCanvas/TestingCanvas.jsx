@@ -6,7 +6,7 @@ import './TestingCanvas.css';
 import { Dropdown } from '../ComponentsLibrary/Dropdowns';
 import { BlueBtn, WhiteBtn, SecondaryBtn } from "../ComponentsLibrary/Buttons";
 import { TextInput } from '../ComponentsLibrary/TextInputs';
-import { Row, Column } from '../ComponentsLibrary/Layout';
+import { Content, Row, Column } from '../ComponentsLibrary/Layout';
 
 const dummyData = [
   {
@@ -29,63 +29,59 @@ const Test = () => {
     <>
       <Link to="/home">Home</Link>
 
-      <div className="testRow">
+     
         {/* Default Component Library */}
-        <Row>
-          <Column layout={"spaceEvenly"}>
-            <BlueBtn>Next</BlueBtn>
-            <BlueBtn>Get started</BlueBtn>
-            <BlueBtn width={120}>Sign up</BlueBtn>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"spaceAround"}>
-            <BlueBtn>Next</BlueBtn>
-            <BlueBtn>Get started</BlueBtn>
-            <BlueBtn width={120}>Sign up</BlueBtn>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"spaceEvenly"}>
-            <Dropdown required label={"Graduation Date"} width={200} optionsData={dummyData} placeholder={"Month"} />
-            <Dropdown label={"Degree"} width={300} optionsData={dummyData} placeholder={"Bachelors"} />
-            <Dropdown required label={"Start Date"} width={200} optionsData={dummyData} placeholder={"Month"} />
-            {/* Figma Design examples */}
-            <Dropdown required label={"End Date"} size={200} inactive optionsData={dummyData} placeholder={"Month"} />
-          </Column>
-        </Row>
-        <Row>
-          <Column layout={"spaceEvenly"}>
-            <BlueBtn>Next</BlueBtn>
-            <BlueBtn>Get started</BlueBtn>
-            <BlueBtn width={120}>Sign up</BlueBtn>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"spaceAround"}>
-            <BlueBtn>Next</BlueBtn>
-            <BlueBtn>Get started</BlueBtn>
-            <BlueBtn width={120}>Sign up</BlueBtn>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"spaceEvenly"}>
-            <Dropdown required label={"Graduation Date"} width={200} optionsData={dummyData} placeholder={"Month"} />
-            <Dropdown label={"Degree"} width={300} optionsData={dummyData} placeholder={"Bachelors"} />
-            <Dropdown required label={"Start Date"} width={200} optionsData={dummyData} placeholder={"Month"} />
-            {/* Figma Design examples */}
-            <Dropdown required label={"End Date"} size={200} inactive optionsData={dummyData} placeholder={"Month"} />
-          </Column>
-          <Column layout={"spaceAround"}>
-            <BlueBtn>Next</BlueBtn>
-            <BlueBtn>Get started</BlueBtn>
-            <BlueBtn width={120}>Sign up</BlueBtn>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"flexEnd"}>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-          <Column layout={"flexStart"}>
-            <BlueBtn width={120}>Sign in</BlueBtn>
-          </Column>
-        </Row>
-      </div>
+        <Column>
+            <Content>
+              <Row>
+                <Column layout={'spaceAround'}>
+                  <BlueBtn>Next</BlueBtn>
+                  <BlueBtn>Get started</BlueBtn>
+                  <BlueBtn width={120}>Sign up</BlueBtn>
+             
+            
+                </Column>
+              </Row>
+            </Content>
+            <Content>
+              <Row>
+                <Column layout={'spaceAround'}>
+                  <BlueBtn>Next</BlueBtn>
+                  <BlueBtn>Get started</BlueBtn>
+                  <BlueBtn width={120}>Sign up</BlueBtn>
+         
+                </Column>
+              </Row>
+            </Content>
+            <Content>
+              <Row>
+                <Column layout={'spaceAround'}>
+                  <BlueBtn>Next</BlueBtn>
+                  <BlueBtn>Get started</BlueBtn>
+           
+                </Column>
+              </Row>
+            </Content>
+        </Column>
+        <Content>
+          <Row>
+            <Column layout={'spaceEvenly'}>
+              <BlueBtn>Next</BlueBtn>
+              <BlueBtn>Get started</BlueBtn>
+        
+            </Column>
+          </Row>
+        </Content>
+        <Content>
+          <Row>
+            <Column layout={'flexStart'}>
+              <BlueBtn>Next</BlueBtn>
+              <BlueBtn>Get started</BlueBtn>
+        
+            </Column>
+          </Row>
+        </Content>
+ 
 
       <div className="testRow">
         {/* Default Component Library */}

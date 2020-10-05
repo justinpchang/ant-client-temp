@@ -14,7 +14,7 @@ const Row = (props) => {
 	return (
 		<>
 		<RowWrapper>
-			{props.children}
+			{ props.children }
 		</RowWrapper>
 		</>
 	);
