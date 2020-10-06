@@ -115,7 +115,7 @@ export const Placeholder = styled.span`
 	
 	letter-spacing: -0.02em;
 
-	${(props) => props.selected !== props.placeholder ? `${COLORS.BLACK}` : 'color: #B4B4B4'};
+	${(props) => props.selected !== props.placeholder ? `color: ${COLORS.BLACK};` : `color: ${COLORS.GREY};`};
 `;
 export const Label = styled.label`
 	position: absolute;
