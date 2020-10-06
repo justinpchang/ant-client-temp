@@ -16,6 +16,7 @@ export const Button = styled.button`
 
     box-sizing: border-box;
     border-radius: 2px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 
     font-style: normal;
     font-weight: 600;
