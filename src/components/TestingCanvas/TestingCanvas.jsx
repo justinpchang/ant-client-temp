@@ -38,20 +38,18 @@ const Test = () => {
       </div>
 
       <div className="testRow">
-        {/* defaults matching figma component library */}
-        <BlueBtn>Button</BlueBtn>
-        <BlueBtn size={10}>Button</BlueBtn>
-        <WhiteBtn>Button</WhiteBtn>
-        <SecondaryBtn>Button</SecondaryBtn>
-        <WhiteBtn inactive>Button</WhiteBtn>
-        <BlueBtn icon>Button</BlueBtn>
-        <WhiteBtn icon>Button</WhiteBtn>
-        <SecondaryBtn size={9.2} icon>
-          Button
-        </SecondaryBtn>
-        <SecondaryBtn icon>Button</SecondaryBtn>
+        {/* implementing buttons to match figma designs */}
+        <BlueBtn>Next</BlueBtn>
+        <BlueBtn>Get started</BlueBtn>
+        <BlueBtn width={120}>Sign up</BlueBtn>
+        <BlueBtn width={120}>Sign in</BlueBtn>
+        <SecondaryBtn>Upload</SecondaryBtn>
+        <SecondaryBtn>Upload a file</SecondaryBtn>
+        <SecondaryBtn icon>Add new education</SecondaryBtn>
+        <SecondaryBtn icon>Add new experience</SecondaryBtn>
+        <SecondaryBtn>Back</SecondaryBtn>
         <WhiteBtn icon inactive>
-          Button
+          Add new experience
         </WhiteBtn>
       </div>
 
