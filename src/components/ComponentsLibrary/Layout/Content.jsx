@@ -8,7 +8,7 @@ const Content = (props) => {
 
 	return (
 		<>
-			<ContentWrapper>
+			<ContentWrapper  width={props.width}>
 				{ props.children }
 			</ContentWrapper>
 		</>
