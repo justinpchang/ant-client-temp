@@ -6,28 +6,27 @@ export const GridWrapper = styled.div`
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 `;
+export const RowWrapper = styled.div`
+	display: flex;
+	flex-flow: column wrap;
 
-export const ContentWrapper = styled.div`
 	// This needs to be testing - depends on how the rest of the designs are, and I can ->
 	// set this to the lowest border component to fix children squishing
+	// default width
+	min-width: 500px;
 
-		// default width
-		min-width: 500px;
-
-	// --
 	width: ${(props) => props.width}px;
 
 	margin: 1% 0;
 	padding: 0 30px 30px 30px;
 
-	border: 1px solid ${COLORS.GREY};
 	background: ${COLORS.WHITE};
 	box-sizing: border-box;
 	border-radius: 5px;
-`;
-export const RowWrapper = styled.div`
-	display: flex;
-	flex-flow: column wrap;
+
+	${(props) => props.border ? `{
+		border: 1px solid ${COLORS.GREY};
+	}` : 'border: none;'}
 `;
 export const ColumnWrapper = styled.div`
 	width: 100%;
